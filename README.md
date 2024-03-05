@@ -110,5 +110,6 @@ Scenario: Show a chart with the number of upcoming events in each city.
 - When the user views the chart section
 - Then a chart displaying the number of upcoming events in each city is shown
 
-**Using Serverless Functions**
+**Using Serverless Functions**    
+
 Serverless functions will be used to ensure app security by using OAuth2 authentication, authorization and session management between the app and the Protected Google Calendar API. Additional benefits include speed and efficiency of the app, scalability, and the ability to implement other APIs to include additional features in the future, for example social media collaboration and sharing.
