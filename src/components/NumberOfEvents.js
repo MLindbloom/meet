@@ -9,7 +9,7 @@ const NumberOfEvents = () => {
     setEventNumber(value);
   };
   return (
-    <div id='numberOfEvents'>
+    <div id='number-of-events'>
       <input type='text' value={eventNumber} onChange={handleInputChange} />
     </div>
   );
