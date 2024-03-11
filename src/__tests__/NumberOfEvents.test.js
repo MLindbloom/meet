@@ -6,9 +6,12 @@ import NumberOfEvents from '../components/NumberOfEvents';
 import userEvent from '@testing-library/user-event';
 
 describe('<NumberOfEvents /> component', () => {
+  const setCurrentNOE = jest.fn();
   let NumberOfEventsComponent;
   beforeEach(() => {
-    NumberOfEventsComponent = render(<NumberOfEvents />);
+    NumberOfEventsComponent = render(
+      <NumberOfEvents setCurrentNOE={setCurrentNOE} />
+    );
   });
   test('has an element with "textbox" role', () => {
     expect(NumberOfEventsComponent.queryByRole('textbox')).toBeInTheDocument();
