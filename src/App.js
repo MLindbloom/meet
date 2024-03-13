@@ -6,6 +6,7 @@ import NumberOfEvents from './components/NumberOfEvents';
 import { useEffect, useState } from 'react';
 import { extractLocations, getEvents } from './api';
 import { InfoAlert, ErrorAlert, WarningAlert } from './components/Alert';
+import Title from './Title';
 
 import './App.css';
 
@@ -41,6 +42,7 @@ const App = () => {
 
   return (
     <div className='App'>
+      <Title />
       <div className='alerts-container'>
         {infoAlert.length ? <InfoAlert text={infoAlert} /> : null}
         {errorAlert.length ? <ErrorAlert text={errorAlert} /> : null}
