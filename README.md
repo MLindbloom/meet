@@ -1,5 +1,9 @@
 # Meet App
 
+
+![Meet_React_App_screenshot](https://github.com/MLindbloom/meet/assets/106117475/5b288c3f-f359-4348-98e2-5512111dba8e)
+
+
 ## Description
 
 Welcome to Meet, a progressive web application (PWA) developed with React and following a Test-Driven Development (TDD) approach. Meet offers a seamless experience for users to discover and explore events in various cities, with features such as filtering by city, toggling event details, specifying the number of events, offline functionality, home screen installation, and visualizations through charts.
