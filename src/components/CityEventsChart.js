@@ -48,7 +48,12 @@ const CityEventsChart = ({ allLocations, events }) => {
           interval={0}
           tick={{ dx: 20, dy: 40, fontSize: 14 }}
         />
-        <YAxis type='number' dataKey='count' name='Number of Events' />
+        <YAxis
+          type='number'
+          dataKey='count'
+          name='Number of Events'
+          allowDecimals={false}
+        />
         <Tooltip cursor={{ strokeDasharray: '3 3' }} />
         <Scatter name='A school' data={data} fill='#8884d8' />
       </ScatterChart>
