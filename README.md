@@ -1,115 +1,55 @@
-## User Stories
+# Meet App
 
-**Filter Events By City:**  
-As a user,
-I should be able to filter events by city and interact with suggestions,  
-So that I can easily find and view events happening in a specific location.
+## Description
 
-**Show/Hide Event Details:**  
-As a user,
-I should be able to interact with event details,  
-So that I can expand events to see details and collapse them to focus on other events.
+Welcome to Meet, a progressive web application (PWA) developed with React and following a Test-Driven Development (TDD) approach. Meet offers a seamless experience for users to discover and explore events in various cities, with features such as filtering by city, toggling event details, specifying the number of events, offline functionality, home screen installation, and visualizations through charts.
 
-**Specify Number of Events:**  
-As a user,
-I should be able to specify the number of events to display,  
-So that I can control the amount of information shown and tailor my event browsing experience.
+## Features
 
-**Use the App When Offline:**  
-As a user,
-I should be able to use the app even when offline,  
-So that I can access cached data and continue interacting with the application seamlessly without an internet connection.
-
-**Add an App Shortcut to the Home Screen:**  
-As a user,
-I should be able to install the meet app as a shortcut on my device home screen,  
-So that I can quickly access the app without navigating through the browser, enhancing convenience and accessibility.
-
-**Display Charts Visualizing Event Details:**  
-As a user,
-I should be able to view a chart illustrating the number of upcoming events in each city,  
-So that I can gain insights into event distribution across different locations and make informed decisions on event attendance and planning.
+- **Filter Events By City**: Easily find and view events happening in specific locations by filtering events based on city.
+- **Show/Hide Event Details**: Expand and collapse event details to focus on selected events conveniently.
+- **Specify Number of Events**: Control the number of events displayed to tailor the browsing experience according to preferences.
+- **Use the App When Offline**: Access cached data and continue interacting with the application seamlessly without an internet connection.
+- **Add an App Shortcut to the Home Screen**: Install Meet as a shortcut on the device home screen for quick access.
+- **Display Charts Visualizing Event Details**: Gain insights into event distribution across different cities through visually appealing charts.
 
 ## Scenarios
 
-**Feature: Filter Events By City**
+### Feature: Filter Events By City
 
-Scenario: When user hasn’t searched for a city, show upcoming events from all cities.
+- **Scenario 1**: Display all upcoming events when no city is specified.
+- **Scenario 2**: Show suggestions for cities as the user types.
+- **Scenario 3**: Allow users to select a city from the suggested list.
 
-- Given the user hasn't entered any city in the search input field
-- When the user views the events page
-- Then upcoming events from all cities are displayed
+### Feature: Show/Hide Event Details
 
-Scenario: User should see a list of suggestions when they search for a city.
+- **Scenario 1**: Enable users to expand event details.
+- **Scenario 2**: Allow users to collapse event details.
 
-- Given the user has entered partial city name in the search input field
-- When the user starts typing to search for a city
-- Then a list of suggestions related to the entered text is displayed
+### Feature: Specify Number of Events
 
-Scenario: User can select a city from the suggested list.
+- **Scenario 1**: Display 32 events by default if no number is specified.
+- **Scenario 2**: Enable users to change the number of displayed events.
 
-- Given the user has entered partial city name in the search input field And a list of suggestions related to the entered text is displayed
-- When the user selects a city from the suggestion list
-- Then the events related to the selected city are displayed
+### Feature: Use the App When Offline
 
-**Feature: Show/Hide Event Details**
+- **Scenario 1**: Load cached data when offline.
+- **Scenario 2**: Display error message when attempting to change settings offline.
 
-Scenario: User can expand an event to see details.
+### Feature: Add an App Shortcut to the Home Screen
 
-- Given the user is viewing a list of events that is collapsed by default
-- When the user clicks on an event
-- Then the event details are expanded and displayed
+- **Scenario**: Allow users to install the Meet app as a shortcut on their device's home screen.
 
-Scenario: User can collapse an event to hide details.
+### Feature: Display Charts Visualizing Event Details
 
-- Given the user has expanded event details
-- When the user clicks on the event again
-- Then the event details are collapsed and hidden
+- **Scenario**: Show a chart illustrating the number of upcoming events in each city.
 
-**Feature: Specify Number of Events**
+## Using Serverless Functions
 
-Scenario: When user hasn’t specified a number, 32 events are shown by default.
+Meet utilizes serverless functions to ensure app security, leveraging OAuth2 authentication, authorization, and session management with the Protected Google Calendar API. This approach also offers speed, efficiency, scalability, and the flexibility to integrate additional APIs in the future, such as social media collaboration and sharing functionalities.
 
-- Given the user hasn't selected how many events they want to be shown
-- When the user views the events page
-- Then 32 events are displayed by default
+## Authors
 
-Scenario: User can change the number of events displayed.
+- [Matthew Lindbloom](mllindbloom@gmail.com)
 
-- Given the user is viewing a list of events
-- When the user selects a specific number of events to be shown
-- Then only the specified number of events are displayed
-
-**Feature: Use the App When Offline**
-
-Scenario: Show cached data when there’s no internet connection.
-
-- Given the user has visited the app before and cached resources And the user is offline
-- When the user opens the app
-- Then the app loads from cache and displays cached content
-
-Scenario: Show error when user changes search settings (city, number of events).
-
-- Given the user is offline
-- When the user tries to change search settings (city, number of events)
-- Then an error message is displayed indicating no internet connection
-
-**Feature: Add an App Shortcut to the Home Screen**
-
-Scenario: User can install the Meet app as a shortcut on their device home screen.
-
-- Given the user is using a mobile device
-- When the user opens the app in the browser And the user clicks on "Add to Home Screen"
-- Then the app shortcut is added to the device's home screen
-
-**Feature: Display Charts Visualizing Event Details**
-
-Scenario: Show a chart with the number of upcoming events in each city.
-
-- Given the user is viewing a list of events
-- When the user views the chart section
-- Then a chart displaying the number of upcoming events in each city is shown
-
-**Using Serverless Functions**    
-
-Serverless functions will be used to ensure app security by using OAuth2 authentication, authorization and session management between the app and the Protected Google Calendar API. Additional benefits include speed and efficiency of the app, scalability, and the ability to implement other APIs to include additional features in the future, for example social media collaboration and sharing.
+Thank you for exploring Meet! I hope you enjoy using my application and find it helpful in discovering exciting events around you. If you have any questions or feedback, feel free to reach out. Happy event browsing! 🎉
