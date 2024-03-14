@@ -3,7 +3,11 @@
 import React from 'react';
 
 function Title() {
-  return <h1>Meet App</h1>;
+  const titleStyle = {
+    fontFamily: 'SF Pro, Arial, sans-serif',
+  };
+
+  return <h1 style={titleStyle}>meet</h1>;
 }
 
 export default Title;
